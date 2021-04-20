@@ -2,7 +2,10 @@
 
 This Task consists on a Spain's map where coronavirus' cases are represented in the different communities using circles. The bigger the circles are, more cases there are in each community. Two buttons have been added to the map, so we can see which communities were more affected in the beginning are in the lasts 14 days.
 
+## Initial Covid Representation in Spain
 ![Initial covid map](./content/task1-initial.PNG "initial covid map")
+
+## Last 14 days Covid Representation in Spain
 ![Last covid map](./content/task1-last.PNG "lastcovid map")
 
 # Steps
