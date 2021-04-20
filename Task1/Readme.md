@@ -149,3 +149,37 @@ document
     updateRadius(statsLast);
   });
   ```
+  _./src/map.css_
+  - Color for the country and the circles.
+  ```css
+  .country {
+  stroke-width: 1;
+  stroke: #2f4858;
+  fill: #008c86;
+}
+
+.affected-marker {
+  stroke-width: 1;
+  stroke: #bc5b40;
+  fill: #f88f70;
+  fill-opacity: 0.7;
+}
+  
+  ```
+  _./src/index.html_
+  - Defining the buttons ids and importing the css and index.ts
+  
+  ```
+  <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./map.css" />
+  </head>
+  <div>
+    <button id="Inicio">Initial Cases</button>
+    <button id="Final">Last 14 days cases</button>
+  </div>
+  <body>
+    <script src="./index.ts"></script>
+  </body>
+</html>
+  ```
