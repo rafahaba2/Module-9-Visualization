@@ -25,12 +25,12 @@ const assignCountryBackgroundColor = (comunidad: string, s: ResultEntry[]) => {
     ])
     .range([
       "#FFFFF",
-      "#FFE8E5",
-      "#F88F70",
-      "#CD6A4E",
-      "#A4472D",
-      "#7B240E",
-      "#540000",
+      "#3aad21",
+      "#348e1f",
+      "#2d701d",
+      "#255419",
+      "#1d3915",
+      "#000000",
     ]);
 
   return item ? color(item.value) : color(0);
@@ -94,6 +94,8 @@ svg
 const updateRadius = (data: ResultEntry[]) => {
   d3.selectAll("circle")
     .data(latLongCommunities)
+    .transition()
+    .duration(500)
     .attr("class", "affected-marker")
     .attr("r", (d) => calculateRadiusBasedOnAffectedCases(d.name, data))
     .attr("cx", (d) => aProjection([d.long, d.lat])[0])
@@ -103,6 +105,8 @@ const updateRadius = (data: ResultEntry[]) => {
 const updateCommunitiesColor = (data: ResultEntry[]) => {
   d3.selectAll("path")
     .data(geojson["features"])
+    .transition()
+    .duration(500)
     .attr("class", "country")
     .style("fill", function (d: any) {
       return assignCountryBackgroundColor(d.properties.NAME_1, data);
